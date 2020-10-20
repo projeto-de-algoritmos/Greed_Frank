@@ -49,8 +49,6 @@ export const Content = styled.div`
     margin-top: 70px;
 
     > div {
-      margin-right: 250px;
-
       button {
         margin-top: 20px;
         height: 50px;
@@ -70,7 +68,6 @@ export const Content = styled.div`
     }
 
     div {
-      margin-left: 250px;
       p {
         font-size: 20px;
         line-height: 1.4;
