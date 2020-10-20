@@ -3,6 +3,20 @@ from collections import defaultdict
 from bitarray import bitarray
 
 
+def convert_music(lyrics):
+    converted_lyrics = []
+
+    for line in lyrics:
+        if line == '':
+            text = '\n'
+        else:
+            text = encode_text(line)
+
+        converted_lyrics.append(text)
+
+    return converted_lyrics
+
+
 def encode_text(text):
 
     freq_lib = defaultdict(int)    # generate a default library

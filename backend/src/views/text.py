@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 from flask_cors import CORS
-from controllers.text import encode_text
+from controllers.text import convert_music
 
 text_blueprint = Blueprint('text', __name__)
 CORS(text_blueprint)
@@ -11,7 +11,7 @@ def convert_text():
     base_text = request.json
 
     if 'text' in base_text:
-        response = encode_text(base_text['text'])
+        response = convert_music(base_text['text'])
 
         return {'coded': response}, 200
     else:
