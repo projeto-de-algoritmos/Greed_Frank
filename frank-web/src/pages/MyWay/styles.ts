@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import frank from '../../assets/frank.png';
 
 export const Container = styled.div``;
 
-export const Header = styled.header`
+export const Footer = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 215px;
+  height: 150px;
   background: #2bd4df;
 
   h1 {
@@ -33,15 +34,16 @@ export const Content = styled.div`
   flex-direction: column;
   margin-bottom: 90px;
 
+  img {
+    width: 100%;
+  }
+
   h1 {
     font-size: 48px;
     line-height: 1.6;
     color: #2bd4df;
   }
 
-  img {
-    margin-top: 90px;
-  }
   span {
     display: flex;
     margin-top: 70px;
@@ -75,13 +77,4 @@ export const Content = styled.div`
       }
     }
   }
-`;
-
-export const Footer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 90px;
-  background: #2bd4df;
 `;

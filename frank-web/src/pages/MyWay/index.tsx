@@ -1,22 +1,70 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
-import { Container, Header, Line, Content, Footer } from './styles';
+import { Container, Footer, Line, Content } from './styles';
 
 import disc from '../../assets/cd.svg';
-import musicOne from '../../assets/musicOne.svg';
+import frank from '../../assets/frank.png';
+import api from '../../services/api';
 
 const MyWay: React.FC = () => {
+  const handleSubmit = useCallback(async () => {
+    const music = {
+      text: [
+        'And now, the end is near',
+        'And so I face the final curtain',
+        "My friend, I'll make it clear",
+        "I'll state my case, of which I'm certain",
+        "I've lived a life that's full",
+        'I travelled each and every highway',
+        'And more, much more than this',
+        'I did it my way',
+        '',
+        "Regrets, I've had a few",
+        'But then again, too few to mention',
+        'I did what I had to do',
+        'And saw it through without exemption',
+        'I planned each charted course',
+        'Each careful step along the byway',
+        'And more, much more than this',
+        'I did it my way',
+        '',
+        'Yes, there were times',
+        "I'm sure you knew",
+        'When I bit off',
+        'More than I could chew',
+        'But through it all',
+        'When there was doubt',
+        'I ate it up and spit it out',
+        'I faced it all and I stood tall',
+        'And did it my way',
+        '',
+        "I've loved, I've laughed and cried",
+        "I've had my fill, my share of losing",
+        'And now, as tears subside',
+        'I find it all so amusing',
+        'To think I did all that',
+        'And may I say, not in a shy way',
+        'Oh, no, oh, no, not me, I did it my way',
+        '',
+        'For what is a man, what has he got?',
+        'If not himself, then he has naught',
+        'To say the things he truly feels',
+        'And not the words of one who kneels',
+        'The record shows I took the blows',
+        'And did it my way',
+        '',
+        'Yes, it was my way',
+      ],
+    };
+
+    const response = await api.post('/api/convert', music);
+    console.log(response);
+  }, []);
   return (
     <Container>
-      <Header>
-        <h1>Frank</h1>
-        <img src={disc} alt="disc" />
-        <h1>Huffman</h1>
-      </Header>
-      <Line />
-
       <Content>
-        <img src={musicOne} alt="musicOne" />
+        <img src={frank} alt="frank" />
+
         <span>
           <div>
             <h1>My Way</h1>
@@ -63,7 +111,9 @@ const MyWay: React.FC = () => {
             <p>The record shows I took the blows</p>
             <p>And did it my way</p>
 
-            <button type="button">Huffman</button>
+            <button type="button" onClick={handleSubmit}>
+              Huffman
+            </button>
           </div>
           <div>
             <h1>My Way</h1>
@@ -112,8 +162,14 @@ const MyWay: React.FC = () => {
           </div>
         </span>
       </Content>
+
       <Line />
-      <Footer />
+
+      <Footer>
+        <h1>Frank</h1>
+        <img src={disc} alt="disc" />
+        <h1>Huffman</h1>
+      </Footer>
     </Container>
   );
 };
