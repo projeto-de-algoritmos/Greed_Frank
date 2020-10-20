@@ -19,23 +19,23 @@ def convert_music(lyrics):
 
 def encode_text(text):
 
-    freq_lib = defaultdict(int)    # generate a default library
-    for ch in text:                # count each letter and record into the frequency library 
+    freq_lib = defaultdict(int)
+    for ch in text:
         freq_lib[ch] += 1
 
-    heap = [[fq, [sym, ""]] for sym, fq in freq_lib.items()]  # '' is for entering the huffman code later
+    heap = [[fq, [sym, ""]] for sym, fq in freq_lib.items()]
 
-    heapify(heap)  # transform the list into a heap tree structure
+    heapify(heap)
 
     while len(heap) > 1:
-        right = heappop(heap)  # heappop - Pop and return the smallest item from the heap
+        right = heappop(heap)
         left = heappop(heap)
 
         for pair in right[1:]:
-            pair[1] = '0' + pair[1]   # add zero to all the right note
+            pair[1] = '0' + pair[1]
         for pair in left[1:]:
-            pair[1] = '1' + pair[1]   # add one to all the left note
-        heappush(heap, [right[0] + left[0]] + right[1:] + left[1:])  # add values onto the heap. Eg. h = []; heappush(h, (5, 'write code')) --> h = [(5, 'write code')]
+            pair[1] = '1' + pair[1]
+        heappush(heap, [right[0] + left[0]] + right[1:] + left[1:])
 
     huffman_list = right[1:] + left[1:]
     huffman_dict = {a[0]: bitarray(str(a[1])) for a in huffman_list}
