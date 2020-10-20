@@ -31,10 +31,13 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 35px;
 
   div {
+    cursor: pointer;
     margin-top: 50px;
     margin-bottom: 60px;
+    transition: all 0.2s;
 
     img:first-child {
       margin-right: 100px;
@@ -48,6 +51,8 @@ export const Content = styled.div`
   }
 
   span {
+    transition: all 0.2s;
+    cursor: pointer;
     img:first-child {
       margin-right: 100px;
     }

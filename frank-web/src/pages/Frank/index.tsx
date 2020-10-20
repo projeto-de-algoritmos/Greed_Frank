@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link, useHistory } from 'react-router-dom';
 import { Container, Header, Line, Content } from './styles';
 
 import disc from '../../assets/cd.svg';
@@ -20,7 +21,9 @@ const Frank: React.FC = () => {
 
       <Content>
         <div>
-          <img src={musicOne} alt="musicOne" />
+          <Link to="/musicOne">
+            <img src={musicOne} alt="musicOne" />
+          </Link>
           <img src={musicTwo} alt="musicTwo" />
         </div>
 
