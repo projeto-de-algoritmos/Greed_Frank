@@ -6,7 +6,7 @@ text_blueprint = Blueprint('text', __name__)
 CORS(text_blueprint)
 
 
-@text_blueprint.route('/api/convert')
+@text_blueprint.route('/api/convert', methods=['POST'])
 def convert_text():
     base_text = request.json
 
