@@ -24,12 +24,20 @@ const Frank: React.FC = () => {
           <Link to="/musicOne">
             <img src={musicOne} alt="musicOne" />
           </Link>
-          <img src={musicTwo} alt="musicTwo" />
+
+          <Link to="/musicTwo">
+            <img src={musicTwo} alt="musicTwo" />
+          </Link>
         </div>
 
         <span>
-          <img src={musicThree} alt="musicThree" />
-          <img src={musicFour} alt="musicFour" />
+          <Link to="/musicThree">
+            <img src={musicThree} alt="musicThree" />
+          </Link>
+
+          <Link to="/musicFour">
+            <img src={musicFour} alt="musicFour" />
+          </Link>
         </span>
       </Content>
     </Container>
