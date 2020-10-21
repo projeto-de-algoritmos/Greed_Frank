@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import { Container, Footer, Line, Content } from './styles';
 import disc from '../../assets/cd.svg';
-import frank from '../../assets/frank.png';
+import frank2 from '../../assets/frank2.png';
 import api from '../../services/api';
 import MyWayMusic from '../../assets/MyWay.mp3';
 
@@ -69,7 +69,7 @@ const MyWay: React.FC = () => {
     <Container>
       <Content>
         <ReactAudioPlayer src={MyWayMusic} autoPlay loop />
-        <img src={frank} alt="frank" />
+        <img src={frank2} alt="frank" />
 
         <span>
           {!isCoded ? (
