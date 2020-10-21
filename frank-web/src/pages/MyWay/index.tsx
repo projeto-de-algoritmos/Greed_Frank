@@ -1,10 +1,11 @@
 import React, { useCallback, useState } from 'react';
 
+import ReactAudioPlayer from 'react-audio-player';
 import { Container, Footer, Line, Content } from './styles';
-
 import disc from '../../assets/cd.svg';
-import frank from '../../assets/frank.png';
+import frank2 from '../../assets/frank2.png';
 import api from '../../services/api';
+import MyWayMusic from '../../assets/MyWay.mp3';
 
 const MyWay: React.FC = () => {
   const [isCoded, setIsCoded] = useState<Array<string>>();
@@ -67,7 +68,8 @@ const MyWay: React.FC = () => {
   return (
     <Container>
       <Content>
-        <img src={frank} alt="frank" />
+        <ReactAudioPlayer src={MyWayMusic} autoPlay loop />
+        <img src={frank2} alt="frank" />
 
         <span>
           {!isCoded ? (
