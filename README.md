@@ -1,44 +1,63 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Frank Huffman
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 3<br>
+**Conteúdo da Disciplina**: Greed<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 17/0062686 |  Pedro Rodrigues Pereira |
+| 17/0008371 |  Daniel de Sousa Oliveira Melo Veras |
 
-## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+## Sobre
+José Antonio, grande entusiasta dos discos de vinil, decidiu tirar poeira de sua coleção e relembrar grandes sucessos do seu idolo de infância, Frank Sinatra. Como um bom programador, decidiu dar uma pitada mais emociante as coisas simples do cotidiano. Ao se deparar procurando as letras das canções, pensou que elas poderiam ser convertidas ao código de Huffman e assim nasceu Frank Huffman, seu projetinho de final de semana.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+### Seleção de música
+
+![01](./docs/musics.jpg)
+
+### Letra antes da conversão
+
+![02](./docs/lyrics.jpg)
+
+### Letra em Huffman
+
+![03](./docs/huffman.jpg)
+
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Javascript e Python<br>
+**Framework**: ReactJS e Flask<br>
+<br>
+Para fazer uso do projeto se faz necessário possuir o Docker e Docker-compose.
+
+1. Primeiro passo é realizar o download do repositório com o seguinte comando:
+
+```
+$ git clone https://github.com/projeto-de-algoritmos/Greed_Frank.git
+```
+
+
+2. Após o download, acesse a pasta base do projeto:
+
+```
+$ cd Greed_Frank
+```
+
+3. Agora basta rodar o seguinte comando do docker
+
+```
+$ docker-compose up --build
+```
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Após a execução do container docker, se faz necessário abrir seu navegador de preferência e acessar o link:
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+**http://localhost:3000/**
+
+A partir desse ponto, é demonstrada a seleção de músicas. Basta selecionar uma e clicar. A música em questão começa a tocar automaticamente e arrastando para baixo se tem a letra junto ao respectivo botão de conversão para Huffman.
 
 
 
